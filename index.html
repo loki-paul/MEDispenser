@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+  <link rel="stylesheet" href="assets/css/login.css"> <!-- modal or extra styles -->
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Login / Sign Up</h2>
+
+    <!-- EMAIL + PASSWORD LOGIN -->
+    <input type="email" id="emailInput" placeholder="Enter your email">
+    <input type="password" id="passwordInputLogin" placeholder="Enter your password">
+    <button id="loginBtn">Login</button>
+
+    <p style="margin: 20px 0;">OR</p>
+
+
+    <!-- GOOGLE LOGIN -->
+    <button id="google-btn">
+      <img src="assets/icons/Google.png" alt="Google Logo" class="google-icon">
+      Sign up with Google
+    </button>
+
+  </div>
+
+  <!-- Basic Info Modal (hidden by default) -->
+  <div id="basicInfoModal" class="modal">
+    <div class="modal-content">
+      <h2>Complete Your Profile</h2>
+      <p>Please provide some basic info to continue.</p>
+      <input type="text" id="nameInput" placeholder="Full Name">
+      <input type="number" id="ageInput" placeholder="Age">
+      <input type="text" id="phoneInput" placeholder="Phone Number">
+      <input type="password" id="passwordInput" placeholder="Set a Password">
+      <button id="saveProfileBtn">Save Profile</button>
+    </div>
+  </div>
+
+  <!-- Firebase config (global var) -->
+  <script src="assets/js/firebase-config.js"></script>
+
+  <!-- JS Modules -->
+  <script type="module" src="assets/js/login.js"></script>
+  <script type="module" src="assets/js/app-functions.js"></script>
+
+</body>
+
+</html>

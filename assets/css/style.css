@@ -1,0 +1,688 @@
+/* ================== Global Styles ================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 15px;
+  background-color: #f8f9fa;
+  color: #495057;
+  line-height: 1.5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+
+}
+.med-info {
+  text-align: left; /* align text to the left */
+}
+
+.med-info h2 {
+  font-size: 24px; /* bigger font for main name */
+  margin: 0;       /* remove extra spacing */
+}
+
+.med-info h5 {
+  font-size: 14px; /* smaller font for container */
+  margin: 2px 0 0 0; /* small spacing below h2 */
+  color: #555; /* optional: gray color */
+}
+
+h1{
+  text-align: center;
+  margin: 20px 0; /* optional: adds spacing above and below */
+}
+
+h2 {
+  transition: color 0.3s;
+}
+
+/* ================== Container Grid ================== */
+.container-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 0 20px;
+}
+
+.container-block {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+  border-top: 5px solid;
+}
+
+.container-block:hover {
+  transform: scale(1.01);
+}
+
+body.dark-mode .container-block {
+  background-color: #101010;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+/* ================== Container Colors ================== */
+#container1-block {
+  background-color: #b1dbff;
+}
+
+#container2-block {
+  background-color: #fcbbc5;
+}
+
+#container3-block {
+  background-color: #f8e9b6;
+}
+
+#container4-block {
+  background-color: #b6fcbc;
+}
+
+#container1-block .container-header {
+  background-color: #f0f8ff;
+}
+
+#container2-block .container-header {
+  background-color: #ffebee;
+}
+
+#container3-block .container-header {
+  background-color: #fff8e1;
+}
+
+#container4-block .container-header {
+  background-color: #e8f5e9;
+}
+
+/* Dark Mode Override for Containers */
+body.dark-mode #container1-block,
+body.dark-mode #container2-block,
+body.dark-mode #container3-block,
+body.dark-mode #container4-block,
+body.dark-mode #container1-block .container-header,
+body.dark-mode #container2-block .container-header,
+body.dark-mode #container3-block .container-header,
+body.dark-mode #container4-block .container-header {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode #container1-block .container-header h2,
+body.dark-mode #container2-block .container-header h2,
+body.dark-mode #container3-block .container-header h2,
+body.dark-mode #container4-block .container-header h2 {
+  color: #e0e0e0 !important;
+}
+
+/* ================== Buttons ================== */
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Container Header Buttons */
+#container1-block .container-header button {
+  background-color: #005aba;
+  color: white;
+}
+
+#container1-block .container-header button:hover {
+  background-color: #0065d2;
+}
+
+#container2-block .container-header button {
+  background-color: #a50010;
+  color: white;
+}
+
+#container2-block .container-header button:hover {
+  background-color: #b90012;
+}
+
+#container3-block .container-header button {
+  background-color: #e0a800;
+  color: #212529;
+}
+
+#container3-block .container-header button:hover {
+  background-color: #d39e00;
+}
+
+#container4-block .container-header button {
+  background-color: #007a1d;
+  color: white;
+}
+
+#container4-block .container-header button:hover {
+  background-color: #1e7e34;
+}
+
+/* ================== Tables ================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+body.dark-mode table {
+  background-color: #1e1e1e;
+}
+
+th,
+td {
+  border: none;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.85rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background-color: #e9ecef;
+  color: #495057;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+body.dark-mode th {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 15px;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 15px;
+  text-align: center;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================== Gear Menu ================== */
+.gear-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 6px;
+  user-select: none;
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.gear-icon:hover {
+  color: #495057;
+}
+
+.gear-menu {
+  position: fixed;
+  background: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 6px 0;
+  display: none;
+  z-index: 1002;
+  min-width: 100px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .gear-menu {
+  background: #2c2c2c;
+  border-color: #444;
+}
+
+.gear-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #495057;
+}
+
+body.dark-mode .gear-menu button {
+  color: #e0e0e0;
+}
+
+.gear-menu button:hover {
+  background-color: #f8f9fa;
+}
+
+body.dark-mode .gear-menu button:hover {
+  background-color: #444;
+}
+
+/* Delete button */
+.gear-menu button:nth-child(2) {
+  background: #dc3545;
+  color: #fff;
+}
+
+.gear-menu button:nth-child(2):hover {
+  background: #c82333;
+}
+
+/* ================== Overlay ================== */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: none;
+}
+
+/* ================== Schedule Dialog ================== */
+#scheduleDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
+  display: none;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode #scheduleDialog {
+  background: rgba(26, 26, 26, 0.98);
+}
+
+#scheduleDialog .header {
+  background: var(--accent-color, #007bff);
+  color: #fff;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#scheduleDialog .content {
+  padding: 10px;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+/* Everyday / Days Grid / Pill Counter / Time Inputs */
+#scheduleDialog .everyday-container button,
+#scheduleDialog .days-grid button,
+#scheduleDialog .pill-counter button,
+#scheduleDialog .pill-counter input,
+#scheduleDialog .time-inputs input[type="time"],
+#scheduleDialog .pill-count label,
+#scheduleDialog .time-inputs label {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #scheduleDialog .everyday-container button,
+body.dark-mode #scheduleDialog .days-grid button,
+body.dark-mode #scheduleDialog .pill-counter button,
+body.dark-mode #scheduleDialog .pill-counter input,
+body.dark-mode #scheduleDialog .pill-count label,
+body.dark-mode #scheduleDialog .time-inputs label,
+body.dark-mode #scheduleDialog .time-inputs input[type="time"] {
+  color: #e0e0e0;
+  background: #1e1e1e;
+  border-color: #555;
+}
+
+/* Active buttons */
+#scheduleDialog .everyday-container button.active,
+#scheduleDialog .days-grid button.active {
+  background: var(--accent-color, #007bff);
+  color: #fff;
+  border-color: var(--accent-color, #007bff);
+}
+
+/* Footer Buttons */
+#scheduleDialog .footer button.save-btn {
+  background: var(--accent-color, #007bff);
+  color: white;
+}
+
+#scheduleDialog .footer button.cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+
+/* ================== Settings Dialog ================== */
+#settingsDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1002;
+  display: none;
+  border-top: 8px solid;
+}
+
+body.dark-mode #settingsDialog {
+  background: #2c2c2c;
+}
+
+#settingsDialog h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* ================== Collapsible Panel ================== */
+.collapsible-header {
+  background: #8b00c2;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  max-width: 760px;
+  margin: 20px auto 0 auto;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.collapsible-content {
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 760px;
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  display: none;
+}
+
+body.dark-mode .collapsible-content {
+  background: #1e1e1e;
+}
+
+.collapsible-content form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ================== Sidebar ================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #f8f9fa;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+}
+
+.sidebar-content {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* make the sidebar take full height */
+}
+
+.sidebar-content .profile-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sidebar-content .profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.sidebar-content .profile-section p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.sidebar-content .profile-section button {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* space between buttons */
+}
+
+.sidebar-links button {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-links button:hover {
+  background-color: #444;
+}
+
+body:not(.dark-mode) .sidebar-links button {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+body:not(.dark-mode) .sidebar-links button:hover {
+  background-color: #e0e0e0;
+}
+
+/* New style for logout button */
+.logout-button {
+  margin-top: auto; /* push it to the bottom */
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* spacing between buttons */
+  margin-top: 10px;
+}
+
+.sidebar-links button {
+  display: block;
+  width: 100%;
+  padding: 6px 12px; /* slightly smaller padding for compactness */
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* rounded corners */
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+
+.sidebar-links button:hover {
+  background-color: #e9ecef; /* subtle hover effect */
+  transform: scale(1.02); /* small pop effect */
+}
+
+
+body.dark-mode .sidebar-links button {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+body.dark-mode .sidebar-links button:hover {
+  background-color: #444;
+}
+.sidebar-footer button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 510px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 1.8rem;
+  background-color: #007bff; /* makes the button visible */
+  color: #fff; /* text/icon color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 2100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode .burger-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Hover effect */
+.burger-btn:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode .burger-btn:hover {
+  background-color: #555;
+}
+
+
+
+/* ================== Modal ================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirmLogoutBtn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#cancelLogoutBtn {
+  background-color: #bdc3c7;
+  color: black;
+}
