@@ -482,7 +482,7 @@ confirmLogoutBtn.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Logged out successfully!");
-      window.location.href = "index.html";
+      window.location.href = "../../index.html";
     })
     .catch((error) => {
       console.error("Logout error:", error);
@@ -606,5 +606,6 @@ function saveMedName(containerNumber) {
       alert("Failed to save: " + err.message);
     });
 }
+
 
 
