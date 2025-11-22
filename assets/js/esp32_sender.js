@@ -3,7 +3,7 @@
 // =====================================
 
 // ESP32 local IP
-const ESP32_IP = "http://192.168.1.175"; // Updated to match your ESP32
+const ESP32_IP = "http://10.246.38.176"; // Updated to match your ESP32
 const ESP32_URL = `${ESP32_IP}/updateSchedules`;
 
 /**
