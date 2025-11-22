@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -46,117 +46,116 @@
   </div>
 
   <h1>Pill Dispenser</h1>
-
-  <div class="container-grid">
-    <!-- Container 1 -->
-    <div class="container-block" id="container1-block">
-      <div class="container-header">
-        <div class="med-info">
-          <h2>Medicine Name:</h2>
-          <h5>Container 1</h5>
-        </div>
-
-        <div>
-          <button onclick="openScheduleDialog(1, null)">+ Add Schedule</button>
-          <!-- <button onclick="openSettingsDialog(1)">Settings</button> -->
-        </div>
+<div class="container-grid">
+  <!-- Container 1 -->
+  <div class="container-block" id="container1-block">
+    <div class="container-header">
+      <div class="med-info">
+        <h2 contenteditable="true" data-container="1" oninput="saveMedNameRealtime(this)">Medicine Name:</h2>
+        <h5>Container 1</h5>
       </div>
-      <div class="table-container">
-        <table id="container1-table">
-          <thead>
-            <tr>
-              <th>Days</th>
-              <th>Pills</th>
-              <th>Times</th>
-              <th style="width:50px;"></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+      <div>
+        <button onclick="openScheduleDialog(1, null)">+ Add Schedule</button>
+        <!-- <button onclick="openSettingsDialog(1)">Settings</button> -->
       </div>
     </div>
-
-    <!-- Container 2 -->
-    <div class="container-block" id="container2-block">
-      <div class="container-header">
-        <div class="med-info">
-          <h2>Medicine Name:</h2>
-          <h5>Container 2</h5>
-        </div>
-        <div>
-          <button onclick="openScheduleDialog(2, null)">+ Add Schedule</button>
-          <!--<button onclick="openSettingsDialog(2)">Settings</button> -->
-        </div>
-      </div>
-      <div class="table-container">
-        <table id="container2-table">
-          <thead>
-            <tr>
-              <th>Days</th>
-              <th>Pills</th>
-              <th>Times</th>
-              <th style="width:50px;"></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Container 3 -->
-    <div class="container-block" id="container3-block">
-      <div class="container-header">
-        <div class="med-info">
-          <h2>Medicine Name:</h2>
-          <h5>Container 3</h5>
-        </div>
-        <div>
-          <button onclick="openScheduleDialog(3, null)">+ Add Schedule</button>
-          <!-- <button onclick="openSettingsDialog(3)">Settings</button> -->
-        </div>
-      </div>
-      <div class="table-container">
-        <table id="container3-table">
-          <thead>
-            <tr>
-              <th>Days</th>
-              <th>Pills</th>
-              <th>Times</th>
-              <th style="width:50px;"></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Container 4 -->
-    <div class="container-block" id="container4-block">
-      <div class="container-header">
-        <div class="med-info">
-          <h2>Medicine Name:</h2>
-          <h5>Container 4</h5>
-        </div>
-        <div>
-          <button onclick="openScheduleDialog(4, null)">+ Add Schedule</button>
-          <!-- <button onclick="openSettingsDialog(4)">Settings</button> -->
-        </div>
-      </div>
-      <div class="table-container">
-        <table id="container4-table">
-          <thead>
-            <tr>
-              <th>Days</th>
-              <th>Pills</th>
-              <th>Times</th>
-              <th style="width:50px;"></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+    <div class="table-container">
+      <table id="container1-table">
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>Pills</th>
+            <th>Times</th>
+            <th style="width:50px;"></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
   </div>
+
+  <!-- Container 2 -->
+  <div class="container-block" id="container2-block">
+    <div class="container-header">
+      <div class="med-info">
+        <h2 contenteditable="true" data-container="2" oninput="saveMedNameRealtime(this)">Medicine Name:</h2>
+        <h5>Container 2</h5>
+      </div>
+      <div>
+        <button onclick="openScheduleDialog(2, null)">+ Add Schedule</button>
+        <!-- <button onclick="openSettingsDialog(2)">Settings</button> -->
+      </div>
+    </div>
+    <div class="table-container">
+      <table id="container2-table">
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>Pills</th>
+            <th>Times</th>
+            <th style="width:50px;"></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Container 3 -->
+  <div class="container-block" id="container3-block">
+    <div class="container-header">
+      <div class="med-info">
+        <h2 contenteditable="true" data-container="3" oninput="saveMedNameRealtime(this)">Medicine Name:</h2>
+        <h5>Container 3</h5>
+      </div>
+      <div>
+        <button onclick="openScheduleDialog(3, null)">+ Add Schedule</button>
+        <!-- <button onclick="openSettingsDialog(3)">Settings</button> -->
+      </div>
+    </div>
+    <div class="table-container">
+      <table id="container3-table">
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>Pills</th>
+            <th>Times</th>
+            <th style="width:50px;"></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Container 4 -->
+  <div class="container-block" id="container4-block">
+    <div class="container-header">
+      <div class="med-info">
+        <h2 contenteditable="true" data-container="4" oninput="saveMedNameRealtime(this)">Medicine Name:</h2>
+        <h5>Container 4</h5>
+      </div>
+      <div>
+        <button onclick="openScheduleDialog(4, null)">+ Add Schedule</button>
+        <!-- <button onclick="openSettingsDialog(4)">Settings</button> -->
+      </div>
+    </div>
+    <div class="table-container">
+      <table id="container4-table">
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>Pills</th>
+            <th>Times</th>
+            <th style="width:50px;"></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 
   <!-- Collapsible Settings Panel 
   <div class="collapsible-header" onclick="toggleSettingsPanel()">Settings ▾</div>
@@ -177,41 +176,57 @@
   <div id="overlay"></div>
 
   <!-- Schedule Dialog -->
-  <div id="scheduleDialog">
-    <div class="header">
-      <h2 id="dialogTitle">Add Schedule</h2>
-      <span class="close-btn" onclick="closeScheduleDialog()">×</span>
+<!-- ------------------- Schedule Dialog ------------------- -->
+<div id="scheduleDialog">
+  <div class="header">
+    <h2 id="dialogTitle">Add Schedule</h2>
+    <span class="close-btn" onclick="closeScheduleDialog()">×</span>
+  </div>
+
+  <div class="content">
+    <!-- Everyday Button -->
+    <div class="everyday-container">
+      <button id="everydayBtn" onclick="toggleEveryday()">Everyday</button>
     </div>
-    <div class="content">
-      <div class="everyday-container">
-        <button id="everydayBtn" onclick="toggleEveryday()">Everyday</button>
-      </div>
-      <div class="days-grid">
-        <button data-day="Monday" onclick="toggleDay(this)">Mon</button>
-        <button data-day="Tuesday" onclick="toggleDay(this)">Tue</button>
-        <button data-day="Wednesday" onclick="toggleDay(this)">Wed</button>
-        <button data-day="Thursday" onclick="toggleDay(this)">Thu</button>
-        <button data-day="Friday" onclick="toggleDay(this)">Fri</button>
-        <button data-day="Saturday" onclick="toggleDay(this)">Sat</button>
-        <button data-day="Sunday" onclick="toggleDay(this)">Sun</button>
-      </div>
-      <div class="pill-count">
-        <label>Pill Count:</label>
-        <div class="pill-counter">
-          <button class="minus-btn" onclick="decrementPillCount()">−</button>
-          <input type="text" id="pillCount" value="1" readonly>
-          <button class="plus-btn" onclick="incrementPillCount()">+</button>
-        </div>
-      </div>
-      <div class="time-inputs" id="timeInputs"></div>
+
+    <!-- Days Grid -->
+    <div class="days-grid">
+      <button data-day="Monday" onclick="toggleDay(this)">Mon</button>
+      <button data-day="Tuesday" onclick="toggleDay(this)">Tue</button>
+      <button data-day="Wednesday" onclick="toggleDay(this)">Wed</button>
+      <button data-day="Thursday" onclick="toggleDay(this)">Thu</button>
+      <button data-day="Friday" onclick="toggleDay(this)">Fri</button>
+      <button data-day="Saturday" onclick="toggleDay(this)">Sat</button>
+      <button data-day="Sunday" onclick="toggleDay(this)">Sun</button>
     </div>
-    <div class="footer">
-      <button class="save-btn" onclick="saveSchedule()">Save</button>
-      <button class="cancel-btn" onclick="closeScheduleDialog()">Cancel</button>
+
+    <!-- Pill Count -->
+    <div class="pill-count">
+      <label>Pill Count:</label>
+      <div class="pill-counter">
+        <button class="minus-btn" onclick="decrementPillCount()">−</button>
+        <input type="text" id="pillCount" value="1" readonly>
+        <button class="plus-btn" onclick="incrementPillCount()">+</button>
+      </div>
+    </div>
+
+    <!-- Time Inputs -->
+    <div class="time-inputs" id="timeInputs"></div>
+
+    <!-- Optional Time Picker Section -->
+    <div class="time-picker">
+      <!-- Dynamically populated by JS in updateTimeFields() -->
     </div>
   </div>
 
-  <!-- Settings Dialog -->
+  <div class="footer">
+    <button class="save-btn" onclick="saveSchedule()">Save</button>
+    <button class="cancel-btn" onclick="closeScheduleDialog()">Cancel</button>
+  </div>
+</div>
+
+
+  <!-- Settings Dialog 
   <div id="settingsDialog">
     <h2 id="settingsDialogTitle">Container Settings</h2>
     <div style="text-align: center; margin-bottom: 15px;">
@@ -230,7 +245,7 @@
       <button id="saveSettingsBtn" onclick="saveSettings()">Save</button>
       <button id="CancelSettingsBtn" onclick="closeSettingsDialog()">Cancel</button>
     </div>
-  </div>
+  </div>                  -->
 
   <!-- Logout Modal -->
   <div id="logoutModal" class="modal-overlay" style="display:none;">
@@ -244,17 +259,29 @@
     </div>
   </div>
 
+  <!-- Warning Modal -->
+  <div id="warningModal" class="warning-modal">
+    <div class="warning-content">
+      <h3>Missing Required Selection</h3>
+      <p>Please select at least one day before saving the schedule.</p>
+      <button onclick="closeWarningModal()" class="warning-ok-btn">OK</button>
+    </div>
+  </div>
+
+
+  <!-- Notification Modal -->
+<div id="uiNotif" class="notif-modal" style="display:none;">
+  <h3>Scheduled Medicines</h3>
+  <div id="notifContent"></div>
+  <button id="stopNotifBtn">Stop</button>
+</div>
+
 
   <!-- JS -->
   <script src="../js/firebase-config.js"></script>
   <script type="module" src="../js/app.js"></script>
   <script type="module" src="../js/app-functions.js"></script>
 
-
 </body>
 
 </html>
-
-
-
-
