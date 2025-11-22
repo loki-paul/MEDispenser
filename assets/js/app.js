@@ -644,7 +644,7 @@ function showUINotification(medName, medTime, bgColor = '#ffcc00') {
 
   // Play alarm once
   if (!alarmAudio) {
-    alarmAudio = new Audio('../sound/notifsound.mp3');
+    alarmAudio = new Audio('assets/sound/notifsound.mp3');
     alarmAudio.loop = true;
     alarmAudio.play().catch(err => console.warn("Audio failed to play:", err));
   }
@@ -756,6 +756,7 @@ if (auth.currentUser) {
         sendSchedulesToESP32(schedules);
     });
 }
+
 
 
 
