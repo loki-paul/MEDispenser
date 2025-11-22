@@ -496,7 +496,7 @@ confirmLogoutBtn.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Logged out successfully!");
-      window.location.href = "index.html";
+      window.location.href = "https://loki-paul.github.io/MEDispenser/index.html";
     })
     .catch((error) => {
       console.error("Logout error:", error);
@@ -756,3 +756,4 @@ if (auth.currentUser) {
         sendSchedulesToESP32(schedules);
     });
 }
+
